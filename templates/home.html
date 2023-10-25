@@ -11,16 +11,26 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
-        
+        margin-bottom: 16px;
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner"src="https://jovian-careers-website.akashgarimella.repl.co/static/banner.jpg">
       <div class="container">
       <h1 class="text-center">Jovian Careers</h1>
-      <img class="img-fluid" id="banner"src="https://jovian-careers-website.akashgarimella.repl.co/static/banner.jpg">
-      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-      <p class="lead">Jovian carees is the right place for you to get rewarded and paid well fot the skillls you have accumulated so far. Here at Jovian we provide with a lot of oppurtunities which can help you grow your skills to a different level and make you feel more confident and accomplished in life and never will you have to look for a failure in your long lasting career. Happy careering wit Jovian.</p>
+      
+      <div class= "row" style= "margin-bottom: 16px">
+        <div class= "col-md-6">
+      <p class="lead">
+        Jovian carees is the right place for you to get rewarded and paid well fot the skillls you have accumulated so far. Here at Jovian we provide with a lot of oppurtunities which can help you grow your skills to a different level and make you feel more confident and accomplished in life and never will you have to look for a failure in your long lasting career. Happy careering wit Jovian.
+      </p>
+          </div>
+        <div class="d-none d-md-block col-6">
+        <img src = "/static/people.jpg" style="height:320px;border-radius:4px;">"
+        </div>
+      </div>
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
       <div>
         {% for job in jobs %}
@@ -28,8 +38,8 @@
         {% endfor %}
       </div>
         <div class="text-center">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-          <p class="mt-4">Copyright 2023, Jovian</p>
+      <a href = "mailto:jovian@careers.ai? subject=Questions about Jobs" type="button" class="btn btn-primary btn-lg">Contact Us</a>
       </div>
+        {% include 'footer.html' %}
   </body>
 </html>
